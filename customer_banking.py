@@ -39,3 +39,18 @@ def main():
 if __name__ == "__main__":
     # Call the main function.
     main()
+
+if __name__ == "__main__":
+    # Example test values
+    test_balance = 1000.0  # Example balance
+    test_interest_rate = 5.0  # Example interest rate (5%)
+    test_months = 12  # Example duration in months
+
+    # Call the create_savings_account function with test values
+    updated_balance, interest_earned = create_savings_account(test_balance, test_interest_rate, test_months)
+
+    # Print the results
+    print(f"Original Balance: {test_balance}")
+    print(f"Interest Earned: {interest_earned}")
+    print(f"Updated Balance: {updated_balance}")
+    
