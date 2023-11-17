@@ -1,5 +1,4 @@
 # Import the create_cd_account and create_savings_account functions
-# ADD YOUR CODE HERE
 from cd_account import create_cd_account
 from savings_account import create_savings_account
 
@@ -10,21 +9,17 @@ def main():
     It displays the interest earned on the savings and CD accounts and updates the balances.
     """
     # Prompt the user to set the savings balance, interest rate, and months for the savings account.
-    # ADD YOUR CODE HERE
     savings_balance = float(input("Enter the savings balance: "))
     savings_interest = float(input("Enter the savings account interest rate: "))
     savings_months = int(input("Enter the number of months for the savings account: "))
 
- 
     # Call the create_savings_account function and pass the variables from the user.
     updated_savings_balance, savings_interest = create_savings_account(savings_balance, savings_interest, savings_months) 
 
     # Print out the interest earned and updated savings account balance with interest earned for the given months.
-    # ADD YOUR CODE HERE
     print(f"Savings Interest Earned: {savings_interest}, Updated Balance: {updated_savings_balance}")
 
     # Prompt the user to set the CD balance, interest rate, and months for the CD account.
-    # ADD YOUR CODE HERE
     cd_balance = float(input("Enter the CD account balance: "))
     cd_interest_rate = float(input("Enter the CD account interest rate: "))
     cd_months = int(input("Enter the number of months for the CD account: "))
@@ -33,24 +28,8 @@ def main():
     updated_cd_balance, interest_earned = create_cd_account(cd_balance, cd_interest_rate, cd_months)
     
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
-    # ADD YOUR CODE HERE
     print(f"CD Interest Earned: {interest_earned}, Updated Balance: {updated_cd_balance}")
 
 if __name__ == "__main__":
     # Call the main function.
     main()
-
-if __name__ == "__main__":
-    # Example test values
-    test_balance = 1000.0  # Example balance
-    test_interest_rate = 5.0  # Example interest rate (5%)
-    test_months = 12  # Example duration in months
-
-    # Call the create_savings_account function with test values
-    updated_balance, interest_earned = create_savings_account(test_balance, test_interest_rate, test_months)
-
-    # Print the results
-    print(f"Original Balance: {test_balance}")
-    print(f"Interest Earned: {interest_earned}")
-    print(f"Updated Balance: {updated_balance}")
-    

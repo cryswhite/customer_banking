@@ -1,5 +1,4 @@
-#Show main menu to user and provide options to user to select from the menu
-
+# Show main menu to user and provide options to select from the menu
 import customer_banking
 
 def show_main_menu():
@@ -19,7 +18,7 @@ def main():
             balance = float(input("Enter savings balance: "))
             interest_rate = float(input("Enter interest rate: "))
             months = int(input("Enter the number of months: "))
-            updated_balance, interest_earned = customer_banking.handle_savings_account(balance, interest_rate, months)
+            updated_balance, interest_earned = customer_banking.create_savings_account(balance, interest_rate, months)
             print(f"Updated Balance: {updated_balance}, Interest Earned: {interest_earned}")
 
         elif choice == '2':
@@ -27,7 +26,7 @@ def main():
             balance = float(input("Enter CD balance: "))
             interest_rate = float(input("Enter interest rate: "))
             months = int(input("Enter the number of months: "))
-            updated_balance, interest_earned = customer_banking.handle_cd_account(balance, interest_rate, months)
+            updated_balance, interest_earned = customer_banking.create_cd_account(balance, interest_rate, months)
             print(f"Updated Balance: {updated_balance}, Interest Earned: {interest_earned}")
 
         elif choice == '3':
@@ -38,4 +37,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
